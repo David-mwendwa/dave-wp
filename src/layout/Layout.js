@@ -6,6 +6,7 @@ class Layout extends Component {
   render() {
     return (
       <div className="container">
+        <div className="navbar">Navbar</div>
         <div className='header'>Header</div>
         <div className='header-side'>Side</div>
         <div className='features'>features</div>

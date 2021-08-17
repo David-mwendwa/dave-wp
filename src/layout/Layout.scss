@@ -2,13 +2,17 @@
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw min-content min-content min-content;
+  grid-template-rows: 10vh 65vh min-content 40vw min-content min-content min-content;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 16rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
   & > * {
-    padding: 40px;
     font-size: 3rem;
   }
+}
+
+.navbar {
+  background-color: $color-primary;
+  grid-column: full-start/full-end;
 }
 
 .header {
