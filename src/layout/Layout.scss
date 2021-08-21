@@ -11,12 +11,14 @@
 }
 
 .navbar {
-  background-color: $color-primary;
+  //background-color: $color-primary;
+  background-image: linear-gradient(93deg, rgba(136, 123, 248, 0.4), rgba(113, 255, 151, 0.4));
   grid-column: full-start/full-end;
 }
 
 .header {
-  background-color: $color-grey-dark-1;
+  //background-color: $color-grey-dark-1;
+  background-color: var(--green-dark);
   grid-column: full-start/col-end 4;
 }
 
@@ -25,25 +27,142 @@
   grid-column: col-start 5 / full-end;
 }
 
-.features {
-  background-color: $color-grey-light-2;
-  grid-column: center-start/center-end;
-}
 
-.about {
-  &__pictures {
-    background-color: $color-primary;
-    grid-column: full-start / col-end 4;
+/*********************FEATURES SECTION*********************/
+.features__section {
+  grid-column: center-start/center-end;
+  display: flex;
+  flex-direction: column;
+
+  .features__title {
+    font-size: inherit;
+    align-self: center;
+    background-color: rgba(134, 121, 249, 0.16);
+    padding: .2rem 1rem;
+    transform: translateY(-50%);
+  }
+  
+  .services {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0 8rem 0;
+
+    .service {
+      background-image: linear-gradient(125deg, rgba(134, 121, 249, 0.16), rgba(113, 255, 151, 0.16));
+      width: 30%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: flex-start;
+      border-radius: 1.5rem;
+      padding: 0 3rem 3rem 3rem;
+
+      i {
+        align-self: flex-start;
+        background-color: #081118;
+        color: white;
+        font-size: 5rem;
+        padding: 1rem;
+        border-radius: 1.5rem;
+        transform: translateY(-50%);
+      }
+
+      h2 {
+        color: var(--gray-light-6);
+        font-size: inherit;
+        padding-bottom: 2rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+        color: var(--gray-light-3);
+      }
+    }
   }
 
-  &__content {
+  
+
+}
+
+/*********************ABOUT SECTION*********************/
+.about {
+  &__sidebar {
+    font-size: inherit;
+    background-color: $color-secondary;
+    color: var(--gray-light-3);
+    grid-column: full-start / col-end 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    img {
+      width: 50%;
+      height: 50%;
+      border-radius: 50%;
+      box-shadow: 0 1.5rem 4rem rgba(black, 0.7);
+      border: 1px solid var(--gray-light-3);
+      filter: grayscale(90%);
+    }
+
+    .social__icons {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 3rem;
+    }
+  }
+
+  &__main {
     background-color: $color-grey-light-1;
-    grid-column: col-start 5 / full-end;
+    grid-column: col-start 4 / full-end;
+    background-image: linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)),
+      url(../images/full-stack.gif);
+    background-size: cover;
+    background-position: center;
+    font-size: inherit;
+    color: var(--gray-light-3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    /********* BUTTON INLINE *********/
+    .btn-inline {
+      right: 0;
+      border: none;
+      color: var(--color-primary);
+      font-size: inherit;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 2px;
+      display: inline-block;
+      background-color: transparent;
+      cursor: pointer;
+      transition: all .2s;
+
+      & span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+      }
+
+      &:hover {
+        color: var(--color-grey-dark-1);
+
+        span {
+          margin-left: 8px;
+        }
+      }
+
+      &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+      }
+    }
   }
 }
 
 .projects {
   background-color: $color-secondary;
+  background-image: linear-gradient(125deg, rgba(134, 121, 249, 0.16), rgba(113, 255, 151, 0.16));
   grid-column: center-start/center-end;
   padding: 2rem;
   display: grid;
@@ -72,5 +191,11 @@
 
 .contacts {
   background-color: $color-grey-dark-1;
+  //background-image: linear-gradient(125deg, rgba(134, 121, 249, 0.16), rgba(113, 255, 151, 0.16));
   grid-column: full-start/full-end;
+
+  form {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+  }
 }
