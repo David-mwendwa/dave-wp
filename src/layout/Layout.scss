@@ -18,13 +18,21 @@
 
 .header {
   //background-color: $color-grey-dark-1;
-  background-color: var(--green-dark);
-  grid-column: full-start/col-end 4;
+  background-color: $color-secondary;
+  grid-column: full-start/col-end 5;
 }
 
 .header-side {
   background-color: $color-secondary;
-  grid-column: col-start 5 / full-end;
+  background-image: radial-gradient(circle at center, red 0, blue, $color-secondary 100%);
+  grid-column: col-start 6 / full-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 50%;
+  }
 }
 
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import AboutMain from '../components/about/AboutMain';
 import profile from '../images/proofile.jpg';
+import man from '../images/man.png'
 
 import './Layout.scss';
 
@@ -10,7 +11,9 @@ class Layout extends Component {
       <div className='container'>
         <div className='navbar'>Navbar</div>
         <div className='header'>Header</div>
-        <div className='header-side'>Side</div>
+        <div className='header-side'>
+          <img src={man} alt="man" />
+        </div>
 
         <div className='features__section'>
           <h1 className='features__title'>What I Do</h1>
